@@ -1,0 +1,37 @@
+name: 'React Doctor Action'
+description: 'Run react-doctor diagnostics on PRs and post findings as inline PR comments. Optionally fail CI if issues exceed a threshold.'
+author: 'Ian Griggs (icgriggs14)'
+
+branding:
+  icon: 'activity'
+  color: 'blue'
+
+inputs:
+  threshold:
+    description: 'Fail CI if total issue count exceeds this number (default: 10)'
+    required: false
+    default: '10'
+  fail_on_error:
+    description: 'Fail CI if any error-level issues found, regardless of threshold'
+    required: false
+    default: 'true'
+  paths:
+    description: 'Space-separated glob patterns for files/directories to check (default: src)'
+    required: false
+    default: 'src'
+  github_token:
+    description: 'GitHub token for posting PR comments (defaults to GITHUB_TOKEN)'
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  issue_count:
+    description: 'Total number of issues found by react-doctor'
+  error_count:
+    description: 'Number of error-level issues found'
+  warning_count:
+    description: 'Number of warning-level issues found'
+
+runs:
+  using: 'node20'
+  main: 'src/index.js'

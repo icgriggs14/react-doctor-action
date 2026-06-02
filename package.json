@@ -1,0 +1,21 @@
+{
+  "name": "react-doctor-action",
+  "version": "1.0.0",
+  "description": "GitHub Action: run react-doctor diagnostics on PRs and post findings as PR comments",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node -e \"require('./src/index.js')\" 2>&1 | head -5 || true"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0"
+  },
+  "keywords": ["react", "react-doctor", "github-action", "code-quality", "ci"],
+  "license": "MIT",
+  "author": "Ian Griggs <iancgriggs87@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icgriggs14/react-doctor-action"
+  }
+}
