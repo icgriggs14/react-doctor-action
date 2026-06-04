@@ -1,4 +1,7 @@
 # react-doctor-action
+[![GitHub Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github)](https://github.com/marketplace/actions/react-doctor-action)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 **GitHub Action CI companion for [react-doctor](https://github.com/millionco/react-doctor)**
 
